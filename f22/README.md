@@ -56,7 +56,8 @@ Make sure you have the following installed:
 
 ### Route Protection
 - Uses **Context API** to track login state.
-- Prevents accessing protected routes via manual URL entry.
+- **Prevents accessing protected routes via manual URL entry.**  
+  Even if a user manually changes the route in the browser, the app checks the stored login state and credentials before granting access.
 
 ---
 
