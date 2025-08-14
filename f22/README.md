@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Login System (Next.js + Context API)
 
-## Getting Started
+## Overview
+This project is a simple login system built with **Next.js** that demonstrates:
+- **Login** and **Logout** functionality.
+- **LocalStorage** for storing and validating credentials.
+- **Context API** for authentication state management.
+- Preventing manual routing to protected pages without authentication.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Prerequisites
+Make sure you have the following installed:
+- [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm)
+- Node.js **v22**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Setup Instructions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Switch to Node.js v22**
+   ```bash
+   nvm use 22
+2. **Install Dependencies**
+   npm install
+3. **Setup Environment Variables**  
+   Create a .env.local file in the root directory and add:
+   NEXT_PUBLIC_EMAIL="admin@example.com"
+   NEXT_PUBLIC_PASSWORD="123456"
+3. **Run the Project**
+     npm start
+  
+ 
+Features
 
-## Learn More
+Login Page
 
-To learn more about Next.js, take a look at the following resources:
+Validates email and password against values stored in .env.local.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Saves credentials to LocalStorage upon successful login.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Logout Functionality
 
-## Deploy on Vercel
+Clears stored credentials from LocalStorage.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Redirects the user to the login page.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Route Protection
+
+Uses Context API to track login state.
+
+Prevents accessing protected routes via manual URL entry.
+
+
+Notes
+
+The default credentials are:
+
+Email: admin@example.com
+
+Password: 123456
+
+You can update them anytime in .env.local.
