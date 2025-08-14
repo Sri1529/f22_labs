@@ -1,4 +1,3 @@
-// /context/AuthContext.js
 "use client";
 
 import { createContext, useState, useEffect } from "react";
@@ -10,7 +9,6 @@ export const AuthProvider = ({ children }) => {
   const router = useRouter();
   const [auth, setAuth] = useState(null);
 
-  // Load auth from localStorage when app starts
   useEffect(() => {
     const storedAuth = localStorage.getItem("authcredentials");
     if (storedAuth) {
