@@ -84,7 +84,7 @@ const LoginForm = () => {
                 <span style={{ display: "flex", alignItems: "center" }}>
                     <ErrorIcon /> Invalid Credentials
                 </span>
-            } open={open}></CustomSnackbar>        </Container>
+            } open={open} setOpen={setOpen}></CustomSnackbar>        </Container>
 
     );
 }
