@@ -28,7 +28,7 @@ Make sure you have the following installed:
    NEXT_PUBLIC_EMAIL="admin@example.com"
    NEXT_PUBLIC_PASSWORD="123456"
 3. **Run the Project**
-     npm start
+     npm run dev
   
  
 Features
