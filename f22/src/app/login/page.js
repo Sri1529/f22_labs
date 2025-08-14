@@ -12,6 +12,7 @@ import {
 import { useRouter } from "next/navigation";
 import { AuthContext } from "../context/authcontext";
 import CustomSnackbar from "../component/snackbar"
+import ErrorIcon from "../assets";
 
 const LoginForm = () => {
     const { login } = useContext(AuthContext);
@@ -79,8 +80,11 @@ const LoginForm = () => {
                     </Button>
                 </Box>
             </Paper>
-           <CustomSnackbar data={"! Invalid Credentials"} open={open} setOpen={setOpen}></CustomSnackbar>
-        </Container>
+            <CustomSnackbar data={
+                <span style={{ display: "flex", alignItems: "center" }}>
+                    <ErrorIcon /> Invalid Credentials
+                </span>
+            } open={open}></CustomSnackbar>        </Container>
 
     );
 }
