@@ -10,7 +10,7 @@ import {
     Snackbar
 } from "@mui/material";
 import { useRouter } from "next/navigation";
-import { AuthContext } from "../authcontext";
+import { AuthContext } from "../context/authcontext";
 import CustomSnackbar from "../component/snackbar"
 
 const LoginForm = () => {

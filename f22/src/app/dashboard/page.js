@@ -3,7 +3,7 @@
 import { Box, Typography, Paper, Button } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../authcontext";
+import { AuthContext } from "../context/authcontext";
 import CustomSnackbar from "../component/snackbar";
 import ErrorIcon from "../assets";
 
